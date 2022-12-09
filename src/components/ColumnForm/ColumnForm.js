@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import TextInput from "../TextInput/TextInput";
 import { useDispatch } from "react-redux";
+import uuid from 'react-uuid';
 
 const ColumnForm = (props) => {
 
@@ -13,7 +14,7 @@ const ColumnForm = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'ADD_COLUMN', newColumn: { title, icon } });
+    dispatch({ type: 'ADD_COLUMN', payload: { id: uuid().slice(0,8), title, icon } });
     setTitle('');
     setIcon('');
  };
