@@ -14,7 +14,7 @@ const ColumnForm = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'ADD_COLUMN', payload: { id: uuid().slice(0,8), title, icon } });
+    dispatch({ type: 'ADD_COLUMN', payload: { id: uuid(), title, icon } });
     setTitle('');
     setIcon('');
  };

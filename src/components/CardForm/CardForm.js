@@ -14,7 +14,7 @@ const CardForm = props => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({type: 'ADD_CARD', payload: { id: uuid().slice(0,8), columnId: props.columnId, title }});
+    dispatch({type: 'ADD_CARD', payload: { id: uuid(), columnId: props.columnId, title }});
     setTitle('');
   }
 
