@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import TextInput from "../TextInput/TextInput";
 import { useDispatch } from "react-redux";
 import uuid from 'react-uuid';
+import { addCard } from '../../redux/store';
 
 
 const CardForm = props => {
@@ -14,7 +15,7 @@ const CardForm = props => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({type: 'ADD_CARD', payload: { id: uuid(), columnId: props.columnId, title }});
+    dispatch( addCard({id: uuid(), columnId: props.columnId, title}));
     setTitle('');
   }
 
