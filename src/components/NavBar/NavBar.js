@@ -1,19 +1,21 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.scss"
 
 const NavBar = () => {
 
   return (
     <nav>
-      <a className={styles.logo} aria-label="Logo" href="/">
-        <i class="fa fa-tasks"></i>
+      <NavLink className={({isActive}) => isActive ? styles.linkActive : undefined} to="/">
+      <div className={styles.logo}>
+        <i className={`fa fa-tasks`}></i>
         <span>ToDo_List</span>
-      </a>
+      </div>
+      </NavLink>
 
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/favorite">Favorite</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><NavLink className={({isActive}) => isActive ? styles.linkActive : undefined} to="/">Home</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? styles.linkActive : undefined} to="/favorite">Favorite</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? styles.linkActive : undefined} to="/about">About</NavLink></li>
       </ul>
     </nav>
   )

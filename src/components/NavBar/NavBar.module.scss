@@ -16,6 +16,7 @@ nav{
     i{
       padding: 20px;
       color: $color-light;
+      transition: .5s;
 
       &::before{
         font-size: 24px;
@@ -26,35 +27,43 @@ nav{
       color: $color-light;
       font-size: 20px;
       font-weight: bold;
+      transition: .5s;
     }
 
   }
 
+  a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $color-light;
+    transition: color .3s;
 
+    &:hover{
+      color: $color-success;
+    }
+  }
 
   ul{
     display: flex;
     list-style: none;
-    // margin-right: 20px;
 
     li{
       padding: 10px 20px;
       margin-right: 20px;
     }
-
-    a{
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      color: $color-light;
-    }
   }
 }
 
-// .fa{
-//   font: normal normal normal 24px/1 FontAwesome;
-// }
+.linkActive{
+  color: $color-success;
 
-// .fa-tasks{
-//   font: normal normal normal 24px/1 FontAwesome;
-// }
+    div{
+      i{
+        transform: scale(1.2);
+      }
+      span{
+        font-size: 24px;
+      }
+    }
+}
