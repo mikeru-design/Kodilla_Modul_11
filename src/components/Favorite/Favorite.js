@@ -5,8 +5,10 @@ const Favorite = () => {
 
   return (
     <div className={styles.hero}>
-        <PageTitle>About</PageTitle>
-        <p className={styles.subtitle}>Lorem</p>
+        <PageTitle>Favorite</PageTitle>
+        <p className={styles.subtitle}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet cupiditate similique!
+        </p>
       </div>
   )
 }

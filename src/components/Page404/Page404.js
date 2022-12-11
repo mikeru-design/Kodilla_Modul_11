@@ -5,7 +5,7 @@ const Page404 = () => {
 
   return (
     <div className={styles.hero}>
-        <PageTitle>404</PageTitle>
+        <PageTitle>404 not found</PageTitle>
         <p className={styles.subtitle}>
           We could't fine page with this address. Try picking something from the navigation
         </p>
