@@ -5,7 +5,7 @@ const NavBar = () => {
 
   return (
     <nav>
-      <NavLink className={({isActive}) => isActive ? styles.linkActive : undefined} to="/">
+      <NavLink className={({isActive}) => isActive ? `${styles.linkActive} ${styles.logo}` : styles.logo} to="/">
       <div className={styles.logo}>
         <i className={`fa fa-tasks`}></i>
         <span>ToDo_List</span>

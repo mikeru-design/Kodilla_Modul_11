@@ -10,4 +10,15 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+
+    .fa{
+        font-size: 16px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+
+.isFavorite{
+    color: yellow;
 }

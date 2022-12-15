@@ -15,7 +15,7 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch( searchCards(searchData));
+    dispatch( searchCards(searchData) );
   }
 
   return (
