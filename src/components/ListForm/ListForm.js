@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import uuid from 'react-uuid';
-import { addList } from '../../redux/store';
+import { addList } from '../../redux/listsRedux';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import styles from './ListForm.module.scss';
@@ -15,7 +14,7 @@ const ListForm = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-    dispatch(addList({id:uuid(), title, description}));
+    dispatch(addList({title, description}));
     setTitle('');
     setDescription('');
   }

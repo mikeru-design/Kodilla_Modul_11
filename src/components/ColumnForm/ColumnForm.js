@@ -4,7 +4,7 @@ import TextInput from "../TextInput/TextInput";
 import uuid from 'react-uuid';
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addColumn } from "../../redux/store";
+import { addColumn } from "../../redux/columnsRedux";
 
 const ColumnForm = (props) => {
 
